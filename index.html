@@ -1,118 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Basic Web</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Heading -->
-     <div class="title-wrapper">
-         <h1>Formulir Pendaftaran</h1>
-     
-         <!-- Anchor -->
-         <!-- <a href="index.html">Home</a>
-         <a href="about.html">About Us</a> -->
-         <!-- Paragpraph -->
-         <p>Setelah kirim formulir kamu akan pindah ke halaman registration fee Rp100rb untuk amankan kuotamu sebelum kursi
-             penuh!</p>
-     </div>
+  <div class="form-container">
+    <h1>Formulir Pendaftaran</h1>
+    <p>Setelah kirim formulir kamu akan pindah ke halaman registration fee Rp100rb untuk amankan kuotamu sebelum kursi penuh!</p>
+    <form>
+      <div class="section">
+        <h2>Pilih Program yang Ingin Diambil</h2>
+        <div class="form-group">
+          <label for="program">Pilih Program</label>
+          <select id="program" name="program">
+            <option value="">Select...</option>
+          </select>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <div class="form-group">
+              <label for="location">Pilih Lokasi</label>
+              <select id="location" name="location">
+                <option value="">Select...</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="batch">Pilih Batch</label>
+              <select id="batch" name="batch">
+                <option value="">Select...</option>
+              </select>
+            </div>
+        </div>
+      </div>
 
-    <!-- Divider -->
-    <!-- <div style="background-color: red; height: 200px; width: 200px;"></div> -->
+      <div class="section">
+        <h2>Informasi Data Diri</h2>
+        <div style="display: flex; gap: 1rem;">
+            <div class="form-group">
+              <label for="first-name">Nama Depan Sesuai KTP</label>
+              <input type="text" id="first-name" name="first-name" placeholder="Nama Depan">
+            </div>
+            <div class="form-group">
+              <label for="last-name">Nama Belakang Sesuai KTP</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Nama Belakang">
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+            <label for="gender">Jenis Kelamin</label>
+            <select id="gender" name="gender">
+                <option value="">Select...</option>
+            </select>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <div class="form-group">
+            <label for="birth-date">Tanggal Lahir</label>
+            <input type="date" id="birth-date" name="birth-date">
+            </div>
+            <div class="form-group">
+            <label for="education">Pendidikan Terakhir</label>
+            <select id="education" name="education">
+                <option value="">Select...</option>
+            </select>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem;">
+            <div class="form-group">
+            <label for="phone">Nomor HP</label>
+            <input type="tel" id="phone" name="phone" placeholder="+62">
+            </div>
+            <div class="form-group">
+            <label for="relative-phone">Nomor HP Kerabat Tidak Serumah</label>
+            <input type="tel" id="relative-phone" name="relative-phone" placeholder="+62">
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="city">Kota Domisili</label>
+          <select id="city" name="city">
+            <option value="">Select...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="address">Alamat Lengkap</label>
+          <textarea id="address" name="address" placeholder="Alamat Lengkap"></textarea>
+        </div>
+      </div>
 
-    <!-- Enter (breakline) -->
-    <!-- Form -->
-     <form class="registration-card">
-             <h3>Pilih Program yang ingin diambil</h3>
-             <div>
-                 <label>Pilih Program</label>
-             </div>
-             <div>
-                 <select>
-                     <option>Kelas ringan</option>
-                     <option>Kelas berat</option>
-                 </select>
-             </div>
+      <div class="section">
+        <div class="form-group">
+          <label for="source">Dari mana Mengetahui Program Ini</label>
+          <select id="source" name="source">
+            <option value="">Select...</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="motivation">Apa motivasi kamu mengikuti program ini?</label>
+          <textarea id="motivation" name="motivation" placeholder="Ceritakan dalam minimal 3 kalimat"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="referral">Kode Referral (Jika Ada)</label>
+          <input type="text" id="referral" name="referral" placeholder="Masukkan Kode Referral">
+        </div>
+        <div class="form-group">
+            <div style="display: flex; gap: 1rem;">
+                <div>
+                    <input type="checkbox" name="terms" required>
+                </div>
+                <label>
+                    Dengan mengirim formulir ini saya menyetujui <a href="#">Syarat dan Ketentuan</a> untuk mengikuti program yang saya daftarkan.
+                </label>
+            </div>
+        </div>
+      </div>
 
-             <div class="flex-row">
-                 <div class="w-full">
-                     <label>Pilih Lokasi</label>
-                     <div>
-                         <select>
-                             <option>Kelas ringan</option>
-                             <option>Kelas berat</option>
-                         </select>
-                     </div>
-                 </div>
-    
-                 <div class="w-full">
-                     <label>Pilih Batch</label>
-                     <div>
-                         <select>
-                             <option>Kelas ringan</option>
-                             <option>Kelas berat</option>
-                         </select>
-                     </div>
-                 </div>
-             </div>
-
-             <h3>Informasi Data diri</h3>
-
-             <div class="flex-row">
-                 <div class="w-full">
-                     <label>Nama Depan</label>
-                     <div>
-                         <input placeholder="nama depan" type="text">
-                     </div>
-                 </div>
-                 <div class="w-full">
-                     <label>Nama Belakang</label>
-                     <div>
-                         <input placeholder="nama belakang" type="text">
-                     </div>
-                 </div>
-             </div>
-
-             <div class="flex-row">
-                 <div class="w-full">
-                     <label>Email</label>
-                     <div>
-                         <input placeholder="email" type="email">
-                     </div>
-                 </div>
-                 <div class="w-full">
-                     <label>Jenis Kelamin</label>
-                     <div>
-                         <select>
-                             <option>Laki-laki</option>
-                             <option>Perempuan</option>
-                         </select>
-                     </div>
-                 </div>
-             </div>
-
-             <div>
-                 <label>Alamat lengkap</label>
-             </div>
-             <div>
-                 <textarea></textarea>
-             </div>
-
-             <div>
-                 <label>
-                     <input type="checkbox">
-                     Dengan mengirim formulir ini saya menyetujui Syarat dan Ketentuan untuk mengikuti program yang saya
-                     daftarkan.
-                 </label>
-             </div>
-             <div class="button-wrapper">
-                 <button type="reset">Reset</button>
-             </div>
-         </form>
+      <button type="submit" class="submit-btn">Kirim Formulir</button>
+    </form>
+  </div>
 </body>
-
 </html>
